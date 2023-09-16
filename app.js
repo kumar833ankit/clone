@@ -392,7 +392,7 @@ setInterval(function()
    // console.log(act_time);
 },10000)
 
-app.listen(process.env.PORT,function()
+app.listen(process.env.PORT||3000,function()
 {
-    console.log("server running ");
+    console.log("server running on 2000");
 })
