@@ -198,7 +198,7 @@ app.post('/tokenValidation',(req,res)=>{
             'id':id,
             'email':email2
         })
-    // AB YAHA PE ID EMAIL SE DATA FIND KAR KE ROUTE KARA LENA
+  
     } catch (err) {
         console.log(err)
         res.json({
@@ -389,7 +389,7 @@ setInterval(function()
     // let act_date=date.substring(0,10);
     act_time=time.substring(0,5);
     // console.log(act_date);
-    console.log(act_time);
+   // console.log(act_time);
 },10000)
 
 app.listen(3000,function()
