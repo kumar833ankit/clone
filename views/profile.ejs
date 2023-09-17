@@ -152,7 +152,7 @@ button:hover, a:hover {
                      
                       <tbody>
                         <%nooflist.forEach(function(data){%>               
-            
+                           <%if(data.email!=email){%>
                           <tr>
                           <% no++ %>
                           <th scope="row"><%= no %></th>
@@ -196,6 +196,7 @@ button:hover, a:hover {
                           
                          
                         </tr>
+                        <%}%>
                         <%})%>
               
                       </tbody>
