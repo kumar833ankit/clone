@@ -355,14 +355,18 @@ app.post("/unfollow",function(req,res)
 {
     const id2=req.body.unfollow;
     let x;
+    let v=0;
     let length=arr.length;
     for(let j=0;j<length;j++)
     {
         if(arr[j]===id2)
         {
             x=j;
+            v=1;
         }
     }
+    if(v==1)
+    {
     let temp;
     temp=arr[length-1];
     arr[length-1]=arr[x];
@@ -380,6 +384,11 @@ app.post("/unfollow",function(req,res)
         }
     })
     res.redirect("/profile");
+    }
+ else
+    {
+     res.redirect("/profile");
+    }
 
 })
 setInterval(function()
