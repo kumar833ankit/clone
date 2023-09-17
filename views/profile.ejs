@@ -183,7 +183,7 @@ button:hover, a:hover {
                         <%if(temp==1){%>
                          <td>
                           <form action="/follow" method="post">
-                          <button type="submit" class="btn btn-danger" name="follow" value=<%= data.email%> onChange="this.form.submit">Added</button>
+                          <button type="submit" class="btn btn-danger" name="follow" disabled value=<%= data.email%> onChange="this.form.submit">Added</button>
                           </form>
                           </td>
                           <td>
