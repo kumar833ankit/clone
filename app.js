@@ -28,6 +28,7 @@ let Password='';
 let id;
 let arr=[];
 let Symbol='';
+let v=0;
 
 var token=''
 
@@ -60,10 +61,12 @@ app.get("/",function(req,res)
 })
 app.get("/register",function(req,res)
 {
+     v=0;
      res.render("register",{isvalid:true});
 })
 app.get("/login",function(req,res)
 {
+    v=0;
     res.render("login",{isvalid:true});
 })
 
@@ -323,11 +326,19 @@ app.get("/update",function(req,res)
 })
 app.post("/submit",function(req,res)
 {
+ if(v==0)
+ {
     id=req.body.submit;
     res.redirect("/update");
+ }
+ else
+ {
+  res.redirect("/");
+ }
 })
 app.post("/logout",function(req,res)
 {
+    v=1;
     token=''
     res.redirect("/");
 })
